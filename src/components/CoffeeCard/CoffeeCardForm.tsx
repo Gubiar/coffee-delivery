@@ -29,7 +29,7 @@ export default function CoffeeCardForm() {
         type="submit"
         className="rounded-md p-3 bg-purple hover:bg-purple-dark transition-all duration-300"
       >
-        <ShoppingCart className="fill-white" />
+        <ShoppingCart size={20} className="fill-white" />
       </button>
     </form>
   );
