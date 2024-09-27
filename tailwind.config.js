@@ -19,7 +19,7 @@ export default {
       "base-text": "var(--base-text)",
       "base-label": "var(--base-label)",
       "base-hover": "var(--base-hover)",
-
+      "base-text-error": "rgba(var(--base-text-error), 1)",
       "base-button": "var(--base-button)",
       "base-input": "var(--base-input)",
       "base-card": "var(--base-card)",

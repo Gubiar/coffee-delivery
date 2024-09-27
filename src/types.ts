@@ -14,3 +14,10 @@ export interface CoffeeProps {
   price: number;
   description: string;
 }
+
+export enum PaymentTypes {
+  CreditCard = "Cartão de Crédito",
+  DebitCard = "Cartão de Débito",
+  Pix = "Pix",
+  Cash = "Dinheiro",
+}
