@@ -3,7 +3,7 @@ import HeroImage from "../../assets/hero.png";
 
 export default function Hero() {
   return (
-    <div className="bg-coffee-light w-full bg-hero-somber bg-cover bg-center bg-no-repeat">
+    <div className="bg-coffee-light w-full bg-cover bg-center bg-no-repeat">
       <main className="container mx-auto p-4 py-12 grid grid-cols-10 grid-rows-1 gap-10 gap-y-14">
         <div className="col-span-10 sm:col-span-5">
           <h1 className="text-6xl font-bold font-baloo-2 text-base-title">
@@ -11,7 +11,7 @@ export default function Hero() {
             qualquer hora do dia
           </h1>
           <p className="text-base-subtitle mt-4 mb-10 text-xl">
-            Com o Coffee Delivery
+            Com o Coffee Delivery{" "}
             <span className="font-bold">
               você recebe seu café onde estiver, a qualquer hora
             </span>

@@ -13,6 +13,7 @@ export interface CoffeeProps {
   types: Array<CoffeeType>;
   price: number;
   description: string;
+  quantity?: number;
 }
 
 export enum PaymentTypes {
