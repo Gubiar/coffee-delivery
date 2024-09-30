@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { Fragment, useContext } from "react";
 import CoffeeCardResume from "./CoffeeCardResume";
 import CoffeeContext from "../../context/CoffeeContext";
 import { Coffee } from "@phosphor-icons/react/dist/ssr";
@@ -40,10 +40,10 @@ export default function OrderSummary() {
   return (
     <div className="rounded-lg rounded-tr-2xl bg-base-card flex flex-col items-start justify-center gap-2 p-6">
       {selectedCoffees.map((coffee) => (
-        <React.Fragment key={coffee.id}>
+        <Fragment key={coffee.id}>
           <CoffeeCardResume coffee={coffee} />
           {divider}
-        </React.Fragment>
+        </Fragment>
       ))}
 
       <div className="w-full mt-5">

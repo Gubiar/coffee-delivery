@@ -141,7 +141,7 @@ function Home() {
         </h1>
         <div className="grid grid-cols-2 gap-3 gap-y-7 sm:gap-6 sm:gap-y-14 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {data.map((value) => (
-            <CoffeeCard coffee={value} />
+            <CoffeeCard key={value.id} coffee={value} />
           ))}
         </div>
       </main>

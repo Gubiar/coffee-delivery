@@ -31,7 +31,7 @@ export default function CoffeeCard({ coffee }: CoffeeCardProps) {
       />
       <div className="flex flex-wrap gap-0.5">
         {coffee.types.map((eachCoffee) => (
-          <CoffeeType value={eachCoffee} />
+          <CoffeeType key={eachCoffee} value={eachCoffee} />
         ))}
       </div>
 
@@ -42,7 +42,7 @@ export default function CoffeeCard({ coffee }: CoffeeCardProps) {
         {coffee.description}
       </p>
 
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center gap-4 justify-center w-full flex-wrap">
         <p className="text-base-text font-black text-2xl flex items-center gap-1">
           <span className="font-normal text-sm">R$</span>
           {coffee.price.toLocaleString("pt-br", {
