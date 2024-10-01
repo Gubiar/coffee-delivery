@@ -40,12 +40,33 @@ function coffeeReducer(state: StateType, action: ActionType): StateType {
   let updatedCoffees;
 
   switch (action.type) {
-    case "ADD_COFFEE":
-      updatedCoffees = [...state.selectedCoffees, action.payload];
+    case "ADD_COFFEE": {
+      const existingCoffeeIndex = state.selectedCoffees.findIndex(
+        (coffee) => coffee.id === action.payload.id
+      );
+
+      if (existingCoffeeIndex !== -1) {
+        updatedCoffees = state.selectedCoffees.map((coffee, index) =>
+          index === existingCoffeeIndex
+            ? {
+                ...coffee,
+                quantity:
+                  (coffee.quantity || 0) + (action.payload.quantity || 1),
+              }
+            : coffee
+        );
+      } else {
+        updatedCoffees = [
+          ...state.selectedCoffees,
+          { ...action.payload, quantity: action.payload.quantity || 1 },
+        ];
+      }
+
       return {
         selectedCoffees: updatedCoffees,
         totalAmount: calculateTotalAmount(updatedCoffees),
       };
+    }
 
     case "REMOVE_COFFEE":
       updatedCoffees = state.selectedCoffees.filter(
